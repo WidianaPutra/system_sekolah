@@ -44,7 +44,7 @@ if (isset($_POST["btn"])) {
 <body>
    <div class="container mt-3 mb-3">
       <h2 class="mb-4">Form Data Guru</h2>
-      <form action="./guru.php" method="POST">
+      <form action="./" method="POST">
          <!-- Kode Guru -->
          <div class="mb-3">
             <label for="code_guru" class="form-label">Kode guru</label>

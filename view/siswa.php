@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
 <body>
    <div class="container mt-3 mb-3">
       <h2 class="mb-4">Form Data Siswa</h2>
-      <form action="./siswa.php" method="POST">
+      <form action="./" method="POST">
          <!-- NIS -->
          <div class="mb-3">
             <label for="nis" class="form-label">NIS</label>

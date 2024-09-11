@@ -38,7 +38,7 @@ if (isset($_POST["btn"])) {
 <body>
    <div class="container mt-3 mb-3">
       <h2 class="mb-4">Form Data Kelas</h2>
-      <form action="./kelas.php" method="POST">
+      <form action="./" method="POST">
          <!-- Nama -->
          <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>

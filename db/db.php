@@ -1,12 +1,10 @@
 <?php
-$conn = new mysqli("localhost", "suriya", "surya15022005", "data_sekolah");
-// $conn = new mysqli("localhost", "root", "", "nama databse");
-
-// if ($conn->connect_error) {
-//    echo "error";
-// } else {
-//    echo "sukses";
-// }
+include("./env.php");
+$host = getenv("DB_HOST");
+$username = getenv("DB_USERNAME");
+$password = getenv("DB_PASSWORD");
+$db_name = getenv("DB_NAME");
+$conn = new mysqli($host, $username, $password, $db_name);
 
 function getQuery($query)
 {
