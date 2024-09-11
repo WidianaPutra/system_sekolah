@@ -1,5 +1,5 @@
 <?php
-include("./db/db.php");
+require("../db/db.php");
 $data_siswa = getQuery('SELECT * FROM siswa');
 ?>
 
@@ -46,7 +46,7 @@ $data_siswa = getQuery('SELECT * FROM siswa');
                <td>
                   <a href="./view/delete.php?id=<?= $result['id'] ?>" class="">Delete</a>
                   <a href="">/</a>
-                  <a href="./view/edit_data_siswa.php?id=<?= $result['id'] ?>" class="">Update</a>
+                  <a href="./edit/edit_data_siswa.php?id=<?= $result['id'] ?>" class="">Update</a>
                </td>
             </tr>
          <?php endforeach; ?>

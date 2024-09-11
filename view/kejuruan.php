@@ -1,5 +1,5 @@
 <?php
-require("../db/db.php");
+require("./db/db.php");
 $errMessage;
 
 if (isset($_POST["btn"])) {
@@ -18,8 +18,9 @@ if (isset($_POST["btn"])) {
             header("Location: ../");
          } else
             $errMessage = "Silah masukan ulang";
-      } else
+      } else {
          $errMessage = "Data sudah ada di database";
+      }
    } else
       $errMessage = "Data tidak lengkap";
 }
@@ -37,7 +38,7 @@ if (isset($_POST["btn"])) {
 
 <body>
    <div class="container mt-3 mb-3">
-      <h2 class="mb-4">Form Data Kelas</h2>
+      <h2 class="mb-4">Form Data Kejuruan</h2>
       <form action="./kelas.php" method="POST">
          <!-- Nama -->
          <div class="mb-3">
@@ -48,7 +49,7 @@ if (isset($_POST["btn"])) {
          <div class="mb-3">
             <label for="kode_jurusan" class="form-label">Kode jurusan</label>
             <input type="kode_jurusan" class="form-control" id="kode_jurusan" name="kode jurusan"
-               placeholder="Masukkan kode_jurusan" required ">
+               placeholder="Masukkan kode jurusan" required ">
          </div>
          <!-- singkatan -->
          <div class=" mb-3">

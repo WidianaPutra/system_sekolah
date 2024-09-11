@@ -1,5 +1,5 @@
 <?php
-include("../db/db.php");
+include("./db/db.php");
 $data_kelas = getQuery("SELECT * FROM kelas");
 $errMessage;
 

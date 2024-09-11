@@ -1,3 +1,10 @@
+<?php
+$page = "murid";
+if (isset($_GET["page"])) {
+   $page = $_GET["page"];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,34 +16,31 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-   <style>
-      body {
-         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .7)), url('./assets/images/1381.webp');
-         background-repeat: no-repeat;
-         background-size: cover;
-      }
-   </style>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <title>Acumalaka</title>
 </head>
 
 <body>
-   <div style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
-      <div
-         style="width: 25%; height: 60%; background-color: rgba(255, 255, 255, .1); border-radius: 20px; backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; box-shadow: 5px 5px 10px rgba(0,0,0, .5);">
-         <div style="display: flex; flex-direction: column;">
-            <a class="text-center" style="color: white; text-decoration: none; font-size: 20px; padding: 10px 0px; "
-               href="./view/dashboard.php">Dashboard</a>
-            <a class="text-center" style="color: white; text-decoration: none; font-size: 20px; padding: 10px 0px; "
-               href="./view/siswa.php">Siswa</a>
-            <a class="text-center" style="color: white; text-decoration: none; font-size: 20px; padding: 10px 0px; "
-               href="./view/guru.php">Guru</a>
-            <a class="text-center" style="color: white; text-decoration: none; font-size: 20px; padding: 10px 0px; "
-               href="">Jurusan</a>
-            <a class="text-center" style="color: white; text-decoration: none; font-size: 20px; padding: 10px 0px; "
-               href="./view/kelas.php">Kelas</a>
-         </div>
-      </div>
+   <div class="w-100 bg-primary d-flex justify-content-evenly align-items-center" style="height: 50px;">
+      <a href="?page=murid" style="color: white; text-decoration: none;">Murid</a>
+      <a href="?page=guru" style="color: white; text-decoration: none;">Guru</a>
+      <a href="?page=kelas" style="color: white; text-decoration: none;">Kelas</a>
+      <a href="?page=kejuruan" style="color: white; text-decoration: none;">Kejuruan</a>
    </div>
+
+   <?php
+   if ($page == 'murid') {
+      include("./view/siswa.php");
+   } elseif ($page == "guru") {
+      include("./view/guru.php");
+   } elseif ($page == "kelas") {
+      include("./view/kelas.php");
+   } elseif ($page == "kejuruan") {
+      include("./view/kejuruan.php");
+   }
+   ?>
+
+   <script src="./libs/tilt.js"></script>
 </body>
 
 </html>

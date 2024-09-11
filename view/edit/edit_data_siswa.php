@@ -1,5 +1,5 @@
 <?php
-include("../db/db.php");
+include("../../db/db.php");
 $id = $_GET["id"];
 if (!isset($_GET['id']) || empty($_GET['id'])) {
    header("Location: ../");
@@ -9,12 +9,6 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 $data_kelas = getQuery('SELECT * FROM kelas');
 $getData = getQuery("SELECT * FROM siswa WHERE id='$id'");
 $data = [];
-
-foreach ($getData as $row) {
-   echo $row['id'];
-   echo $row['nama'];
-}
-
 
 if (isset($_POST["submit"])) {
    $nis = $_POST['nis'];

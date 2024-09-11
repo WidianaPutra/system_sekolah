@@ -1,10 +1,10 @@
 <?php
-include("../db/db.php");
+include("./db/db.php");
 $errMessage;
 
 if (isset($_POST["btn"])) {
    $nama = $_POST["nama"];
-   $code = $_POST["kode_jurusan"];
+   $code = $_POST["kode_kelas"];
    $singkatan = $_POST["singkatan"];
 
    $data = getQuery("SELECT * FROM kelas WHERE kelas='$nama' OR kode_kelas='$code' OR singkatan='$singkatan'");
@@ -46,9 +46,9 @@ if (isset($_POST["btn"])) {
          </div>
          <!-- codde jurusan -->
          <div class="mb-3">
-            <label for="kode_jurusan" class="form-label">Kode jurusan</label>
-            <input type="kode_jurusan" class="form-control" id="kode_jurusan" name="kode jurusan"
-               placeholder="Masukkan kode_jurusan" required ">
+            <label for="kode_kelas" class="form-label">Kode jurusan</label>
+            <input type="kode_kelas" class="form-control" id="kode_kelas" name="kode jurusan"
+               placeholder="Masukkan kode kelas" required ">
          </div>
          <!-- singkatan -->
          <div class=" mb-3">
