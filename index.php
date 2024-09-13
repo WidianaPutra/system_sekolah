@@ -13,7 +13,7 @@ if (isset($_GET["page"])) {
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./libs/bootsrap.css">
    <script src="./libs/bootsrap.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="./libs/scripts/sweetAlert.js"></script>
    <title>Acumalaka</title>
 </head>
 
@@ -25,10 +25,6 @@ if (isset($_GET["page"])) {
       <a href="?page=kejuruan" style="color: white; text-decoration: none; font-size: 18px;">Kejuruan</a>
       <a href="f" style="color: white; text-decoration: none; font-size: 18px;">Kelola</a>
    </div>
-
-   <?php
-   echo getenv('DB_HOST');
-   ?>
 
    <?php
    if ($page == 'murid') {
